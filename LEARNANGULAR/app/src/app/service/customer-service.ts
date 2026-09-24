@@ -1,0 +1,64 @@
+import { Injectable } from '@angular/core';
+import { CustomerType } from '../classes/IPCustomer';
+
+@Injectable({
+providedIn: 'root'
+})
+export class CustomerService {
+
+  customerTypes: CustomerType[] = [
+  {
+  CustomerTypeId: 1,
+  CustomterTypeName: 'VIP',
+  Customers: [
+  {
+  Id: 'Cus123',
+  Name: 'Obama',
+  Email: '[obama@gmail.com](mailto:obama@gmail.com)',
+  Age: 67,
+  Image: 'assets/avatars/obama.jpg'
+  },
+  {
+  Id: 'Cus456',
+  Name: 'Kim jong Un',
+  Email: '[unun@gmail.com](mailto:unun@gmail.com)',
+  Age: 38,
+  Image: 'assets/avatars/kimjongun.jpg'
+  },
+  {
+  Id: 'Cus789',
+  Name: 'Putin',
+  Email: '[putin@gmail.com](mailto:putin@gmail.com)',
+  Age: 77,
+  Image: 'assets/avatars/putin.jpg'
+  }
+  ]
+  },
+  {
+  CustomerTypeId: 2,
+  CustomterTypeName: 'Normal',
+  Customers: [
+  {
+  Id: 'Cus000',
+  Name: 'Hồ Cẩm Đào',
+  Email: '[hodao@gmail.com](mailto:hodao@gmail.com)',
+  Age: 16,
+  Image: 'assets/avatars/hodao.jpg'
+  },
+  {
+  Id: 'Cus111',
+  Name: 'Tap Can Binh',
+  Email: '[binhbinh@gmail.com](mailto:binhbinh@gmail.com)',
+  Age: 67,
+  Image: 'assets/avatars/canbinh.jpg'
+  }
+  ]
+  }
+  ];
+
+  constructor() {}
+
+  getCustomers() {
+  return this.customerTypes;
+  }
+}
