@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-
 import { RouterModule, Routes } from '@angular/router';
 
 import { ServiceProductImageEvent }
@@ -13,6 +12,9 @@ import { Categorizeproduct }
 
 import { CustomerListComponent }
   from './customer-list-component/customer-list-component';
+
+import { Customerlistcallhttpservice }
+  from './customerlistcallhttpservice/customerlistcallhttpservice';
 
 
 const routes: Routes = [
@@ -33,22 +35,24 @@ const routes: Routes = [
   },
 
   {
-   path: 'customer-list-component',
-component: CustomerListComponent
+    path: 'customer-list-component',
+    component: CustomerListComponent
   },
+
+  {
+    path: 'customerlistcallhttpservice',
+    component: Customerlistcallhttpservice
+  }
 
 ];
 
 
 @NgModule({
-
   imports: [
     RouterModule.forRoot(routes)
   ],
-
   exports: [
     RouterModule
   ]
-
 })
 export class AppRoutingModule {}
